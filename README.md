@@ -1,3 +1,5 @@
+# Example Repo Acompanying [onqtam/doctest/issues/224](https://github.com/onqtam/doctest/issues/224)
+
 Desired functionallity:
 
   - Library has tests written directely in the source
@@ -35,4 +37,9 @@ make[2]: *** [exec] Error 1
 make[1]: *** [CMakeFiles/exec.dir/all] Error 2
 make: *** [all] Error 2
 
+```
+Or directly with `g++`:
+``` bash
+> g++ -std=c++11 -Iexternal/doctest/doctest lib.cpp testrunner.cpp  # Works just fine.
+> g++ -std=c++11 -Iexternal/doctest/doctest lib.cpp exec.cpp   # Fails as above.
 ```
