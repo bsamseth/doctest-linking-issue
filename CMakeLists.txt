@@ -6,6 +6,7 @@ target_include_directories(doctest INTERFACE ${PROJECT_SOURCE_DIR}/external/doct
 
 add_library(lib OBJECT lib.cpp)
 target_link_libraries(lib PRIVATE doctest)
+set_target_properties(lib PROPERTIES CXX_STANDARD 11)
 
 add_executable(testrunner testrunner.cpp)
 target_link_libraries(testrunner PRIVATE lib doctest)
